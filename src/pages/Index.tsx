@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import {
   Shield,
   CheckCircle2,
@@ -49,13 +50,21 @@ const Index = () => {
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-6">
-            <Button variant="ghost" className="text-primary font-semibold">
-              Home
+            <Button variant="ghost" className="text-primary font-semibold" asChild>
+              <Link to="/">Home</Link>
             </Button>
-            <Button variant="ghost">Chat</Button>
-            <Button variant="ghost">My Application</Button>
-            <Button variant="ghost">Documents</Button>
-            <Button variant="ghost">More</Button>
+            <Button variant="ghost" asChild>
+              <Link to="/chat">Chat</Link>
+            </Button>
+            <Button variant="ghost" asChild>
+              <Link to="/my-application">My Application</Link>
+            </Button>
+            <Button variant="ghost" asChild>
+              <Link to="/documents">Documents</Link>
+            </Button>
+            <Button variant="ghost" asChild>
+              <Link to="/more">More</Link>
+            </Button>
           </nav>
         </div>
       </header>
@@ -78,13 +87,17 @@ const Index = () => {
                 competitive rates, and personalized loan offers tailored just for you.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  <MessageSquare className="mr-2 h-5 w-5" />
-                  Start Your Application
+                <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+                  <Link to="/chat">
+                    <MessageSquare className="mr-2 h-5 w-5" />
+                    Start Your Application
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline">
-                  <Calculator className="mr-2 h-5 w-5" />
-                  Check Eligibility
+                <Button size="lg" variant="outline" asChild>
+                  <Link to="/chat">
+                    <Calculator className="mr-2 h-5 w-5" />
+                    Check Eligibility
+                  </Link>
                 </Button>
               </div>
               <div className="flex flex-wrap gap-8 pt-4">
