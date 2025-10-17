@@ -13,7 +13,7 @@ type Message = { role: "user" | "assistant"; content: string };
 
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", content: "Hello! I'm your LoanBot Assistant. I can help you with your personal loan application. What would you like to know?" }
+    { role: "assistant", content: "Hello! I'm your Lendify Assistant. I can help you with your personal loan application. What would you like to know?" }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -194,7 +194,7 @@ export default function Chat() {
 
   const clearChat = () => {
     setMessages([
-      { role: "assistant", content: "Hello! I'm your LoanBot Assistant. I can help you with your personal loan application. What would you like to know?" }
+      { role: "assistant", content: "Hello! I'm your Lendify Assistant. I can help you with your personal loan application. What would you like to know?" }
     ]);
     toast({ title: "Chat cleared" });
   };
@@ -269,7 +269,7 @@ export default function Chat() {
                   <Bot className="h-5 w-5 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">LoanBot Assistant</h3>
+                  <h3 className="font-semibold">Lendify Assistant</h3>
                   <p className="text-xs text-muted-foreground flex items-center gap-1">
                     Personal Loan Specialist
                     <Badge variant="secondary" className="ml-2">

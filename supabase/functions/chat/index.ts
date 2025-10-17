@@ -13,7 +13,7 @@ serve(async (req) => {
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
 
-    const systemPrompt = `You are LoanBot Pro, a personal loan specialist for Bajaj Finance. Your role is to assist customers with accurate information about our personal loan products.
+    const systemPrompt = `You are Lendify Assistant, a personal loan specialist for Bajaj Finance. Your role is to assist customers with accurate information about our personal loan products.
 
 **LOAN PRODUCTS & FEATURES:**
 - Loan Amount: ₹40,000 to ₹55 lakh

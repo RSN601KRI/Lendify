@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Home, MessageSquare, FileText, Upload, MoreHorizontal } from "lucide-react";
-import logoImage from "@/assets/loanbot-logo.png";
+import lendifyLogo from "@/assets/lendify-logo.png";
 
 export const Header = () => {
   const location = useLocation();
@@ -12,10 +12,10 @@ export const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logoImage} alt="LoanBot Pro" className="h-10 w-10 rounded-lg" />
+          <img src={lendifyLogo} alt="Lendify" className="h-10 w-10 rounded-lg" />
           <div>
-            <h1 className="text-lg font-bold text-foreground">LoanBot Pro</h1>
-            <p className="text-xs text-muted-foreground">Tata Capital</p>
+            <h1 className="text-lg font-bold text-foreground">Lendify</h1>
+            <p className="text-xs text-muted-foreground">Bajaj Finance</p>
           </div>
         </Link>
 
