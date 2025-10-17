@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Bot, Home, MessageSquare, FileText, Upload, MoreHorizontal } from "lucide-react";
+import { Home, MessageSquare, FileText, Upload, MoreHorizontal } from "lucide-react";
+import logoImage from "@/assets/loanbot-logo.png";
 
 export const Header = () => {
   const location = useLocation();
@@ -11,9 +12,7 @@ export const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-primary">
-            <Bot className="h-6 w-6 text-white" />
-          </div>
+          <img src={logoImage} alt="LoanBot Pro" className="h-10 w-10 rounded-lg" />
           <div>
             <h1 className="text-lg font-bold text-foreground">LoanBot Pro</h1>
             <p className="text-xs text-muted-foreground">Tata Capital</p>
