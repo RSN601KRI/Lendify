@@ -1,73 +1,127 @@
-# Welcome to your Lovable project
+# 💼 Loan Master Agent — AI-driven BFSI Chatbot (Tata Capital)
 
-## Project info
+An **AI-powered conversational loan sales system** built for the **Banking, Financial Services, and Insurance (BFSI)** domain.  
+This project simulates a **multi-agent AI system** for Tata Capital that handles **end-to-end personal loan processing** — from customer chat to loan sanction.
 
-**URL**: https://lovable.dev/projects/463b7fbd-063b-48cf-af65-b905fea9ef1d
+## 🚀 Overview
 
-## How can I edit this code?
+This project demonstrates how **Agentic AI** can transform financial sales.  
+It features a **Master Agent (AI Controller)** orchestrating multiple **Worker Agents** that collaboratively handle tasks like:
+- Customer engagement and persuasion  
+- Loan eligibility and verification  
+- Credit evaluation and underwriting  
+- Sanction letter generation  
 
-There are several ways of editing your application.
+The interface is built as a **web-based chatbot** for Tata Capital to increase personal loan sales conversion rates.
 
-**Use Lovable**
+## 🧠 Agentic AI Architecture
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/463b7fbd-063b-48cf-af65-b905fea9ef1d) and start prompting.
+### 🔹 Master Agent
+- Controls the conversation flow  
+- Identifies user intent and triggers relevant Worker Agents  
+- Coordinates tasks and closes the loan process  
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🔹 Worker Agents
+| Agent | Responsibility |
+|--------|----------------|
+| 💬 **Sales Agent** | Engages customers, discusses loan amount, tenure, and interest |
+| 🔍 **Verification Agent** | Performs KYC checks using a mock CRM server |
+| 🧾 **Underwriting Agent** | Fetches credit score (mock API), validates eligibility, requests salary slip if required |
+| 📄 **Sanction Letter Generator** | Generates PDF sanction letters automatically for approved loans |
 
-**Use your preferred IDE**
+## 🧩 System Design
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**Mock APIs and Servers**
+- `CRM Server`: Simulated KYC validation (name, phone, address)
+- `Credit Bureau API`: Returns dummy credit scores (out of 900)
+- `OfferMart Server`: Hosts pre-approved loan offers
+- `File Upload`: Dummy salary slip upload (PDF/image)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+**Sample Data**
+- 10 dummy customers with pre-approved loan limits and credit profiles  
+  (stored locally in `/src/data/customers.ts`)
 
-Follow these steps:
+## 🛠️ Tech Stack
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+| Category | Technology |
+|-----------|-------------|
+| **Frontend Framework** | [Vite](https://vitejs.dev/) + [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) |
+| **State Management** | React Hooks / Context |
+| **AI Simulation** | Modular JS classes for Master & Worker agents |
+| **PDF Generation** | jsPDF / html2pdf (for sanction letter) |
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📂 Project Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
 ```
 
-**Edit a file directly in GitHub**
+loan-master-agent/
+├── public/                 # Static assets
+├── src/                    # Source code
+│   ├── agents/             # Master + Worker agent logic
+│   ├── components/         # Reusable React UI components
+│   ├── data/               # Synthetic customer and loan data
+│   ├── pages/              # Chatbot page + landing UI
+│   ├── services/           # Mock API calls
+│   └── utils/              # Helper functions
+├── index.html
+├── package.json
+├── tailwind.config.ts
+├── vite.config.ts
+└── tsconfig.json
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+````
 
-**Use GitHub Codespaces**
+## ⚙️ Installation & Setup
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+# Clone the repo
+git clone https://github.com/RSN601KRI/loan-master-agent.git
 
-## What technologies are used for this project?
+# Navigate to folder
+cd loan-master-agent
 
-This project is built with:
+# Install dependencies
+npm install
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# Run the project
+npm run dev
+````
 
-## How can I deploy this project?
+> The app will start at `http://localhost:5173/`
 
-Simply open [Lovable](https://lovable.dev/projects/463b7fbd-063b-48cf-af65-b905fea9ef1d) and click on Share -> Publish.
+## 🧪 Key Features
 
-## Can I connect a custom domain to my Lovable project?
+✅ Human-like conversational interface
+✅ Multi-agent orchestration logic
+✅ Realistic loan eligibility simulation
+✅ KYC & credit score verification flow
+✅ Dynamic sanction letter generation
+✅ Edge-case handling (rejection, salary slip validation)
 
-Yes, you can!
+## 🧠 Example Chat Flow
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**User:** I’m interested in a personal loan
+**Master Agent:** Great! Could you share how much you need and for what purpose?
+**Sales Agent:** Offers suitable tenure and rates
+**Verification Agent:** Confirms your KYC from CRM
+**Underwriting Agent:** Fetches credit score → Validates EMI conditions
+**Sanction Agent:** Generates final sanction letter (PDF download)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📸 Screenshots
+
+(Add screenshots of chatbot UI, sanction letter, and flow diagram)
+
+## 🏗️ Future Enhancements
+
+* Integration with real APIs for credit score and KYC
+* NLP-powered conversation layer using LLMs
+* Dashboard for loan statistics
+* Secure backend integration with databases
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+Feel free to use, modify and distribute with proper attribution.
+
+**“Transforming BFSI with Conversational AI — one loan at a time.”**
