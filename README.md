@@ -1,4 +1,4 @@
-# 💼 Loan Master Agent — AI-driven BFSI Chatbot (Tata Capital)
+# 💼 Lendify: AI-driven Loan Master Agent BFSI Chatbot (Tata Capital)
 
 An **AI-powered conversational loan sales system** built for the **Banking, Financial Services, and Insurance (BFSI)** domain.  
 This project simulates a **multi-agent AI system** for Tata Capital that handles **end-to-end personal loan processing** — from customer chat to loan sanction.
